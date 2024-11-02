@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply w-48 h-64 shadow-md rounded-lg;
+}
+
+.card__cover {
+  @apply w-full h-3/5 rounded-t-lg bg-norway bg-cover;
+}
+
+.card__info {
+  @apply w-full h-2/5 bg-secondary rounded-b-lg flex flex-col justify-center;
+}
+
+.card__info--title {
+  @apply text-white font-bold text-xl px-4;
+}
+
+.card__info--subtitle {
+  @apply text-white text-base px-4 py-2;
+}
