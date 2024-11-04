@@ -7,7 +7,7 @@
   <title>Platzi Travel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -16,7 +16,7 @@
     <nav></nav>
   </header>
   <div id="tab-bar"
-    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10">
+    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10 lg:hidden">
     <a href="#home">
       <img src="./svg/home.svg" alt="Home Icon">
     </a>
@@ -37,17 +37,21 @@
     <section class="w-full h-auto">
       <div id="home">
         <div class="w-full h-3/4">
-          <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center ">
+          <div
+            class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-20 lg:justify-start">
             <input
-              class="transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 outline-none p-3 rounded-full shadow-sm"
+              class="transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 outline-none p-3 rounded-full shadow-sm lg:hidden"
               placeholder="San Francisco" type="search">
+            <div class="hidden lg:h-auto lg:w-2/5 lg:flex lg:pb-6">
+              <p class="text-4xl ml-16 font-bold text-black">Encuentra más ubicaciones como esta.</p>
+            </div>
             <button
-              class="transition duration-500 ease-in-out hover:bg-principal hover:text-white hover:-translate-y-1 hover:scale-110 bg-white text-lg text-principal shadow-sm font-semibold p-4 w-48 rounded-full">
+              class="transition duration-500 ease-in-out hover:bg-principal hover:text-white hover:-translate-y-1 hover:scale-110 bg-white text-lg text-principal shadow-sm font-semibold p-4 w-48 rounded-full lg:ml-16">
               Explorar
             </button>
           </div>
-          <div class="w-full h-full">
-            <img src="./img/sanFrancisco.jpg" alt="A landscape from San Francisco">
+          <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+            <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="A landscape from San Francisco">
           </div>
         </div>
       </div>
@@ -106,25 +110,31 @@
           </div>
         </div>
       </div>
-      <div class="px-2 h-auto w-full" id="featured-rentals">
+      <div class="px-2 h-auto w-full lg:px-6" id="featured-rentals">
         <p class="text-3xl text-principal font-semibold pb-6 mt-6">Featured Rentals</p>
-        <div class="w-full flex flex-col space-y-4 items-center justify-center">
-          <div class="w-full h-96 bg-chicago bg-cover rounded-xl">
-            <p class="card__title">Chicago</p>
-            <p class="text-sm pl-8 text-white mr-24">Two bedrooms, bathroom and kitchen</p>
+        <div class="w-full flex flex-col items-center justify-center">
+          <div class="w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center">
+            <p class="card__title lg:text-black">Chicago</p>
+            <p class="text-sm pl-8 text-white lg:text-black mr-24 lg:text-lg">Two bedrooms, bathroom and kitchen</p>
           </div>
-          <div class="w-full h-96 bg-LA bg-cover rounded-xl">
-            <p class="card__title">Los Angeles</p>
-            <p class="text-sm pl-8 text-white mr-24">Four bedrooms, three bathrooms, kitchen and private pool</p>
-          </div>
-          <div class="w-full h-96 bg-miami bg-cover rounded-xl">
-            <p class="card__title">Miami</p>
-            <p class="text-sm pl-8 text-white mr-24">Three bedrooms, two bathrooms, kitchen and an excellent view of the
-              sea</p>
-          </div>
-          <div class="w-full h-96 bg-bali bg-cover rounded-xl">
-            <p class="card__title">Bali</p>
-            <p class="text-sm pl-8 text-white mr-24">Two bedrooms, bathroom, kitchen and private pool</p>
+          <div class="hidden lg:flex lg:h-full lg:w-full lg:space-x-4">
+            <div class="w-full h-96 bg-LA bg-cover rounded-xl mb-8 lg:h-auto">
+              <p class="card__title">Los Angeles</p>
+              <p class="text-sm pl-8 text-white mr-24 lg:text-lg">Four bedrooms, three bathrooms, kitchen and private
+                pool</p>
+            </div>
+            <div class=" w-full h-full">
+              <div class="w-full h-96 bg-miami bg-cover rounded-xl mb-8">
+                <p class="card__title">Miami</p>
+                <p class="text-sm pl-8 text-white mr-24 lg:text-lg">
+                  Three bedrooms, two bathrooms, kitchen and an excellent view of the sea
+                </p>
+              </div>
+              <div class="w-full h-96 bg-bali bg-cover rounded-xl mb-8">
+                <p class="card__title">Bali</p>
+                <p class="text-sm pl-8 text-white mr-24 lg:text-lg">Two bedrooms, bathroom, kitchen and private pool</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +176,7 @@
       </div>
     </section>
   </main>
-  <footer class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16">
+  <footer class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16 lg:pb-6">
     <p class="text-lg text-principal font-semibold">About</p>
     <p>Investors</p>
     <p>Jobs</p>
