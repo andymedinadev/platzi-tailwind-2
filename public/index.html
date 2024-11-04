@@ -13,7 +13,23 @@
 
 <body class="font-Montserrat">
   <header>
-    <nav></nav>
+    <nav class="w-full h-14 hidden bg-white p-4 justify-between lg:flex lg:fixed z-50">
+      <div class="h-auto w-auto">
+        <p class="text-xl text-principal font-black">Platzi Travel</p>
+      </div>
+      <div class="flex space-x-8">
+        <a href="#home" class="font-bold text-base">Inicio</a>
+        <a href="#recommended" class="font-bold text-base">Recomendados</a>
+        <a href="#featured-rentals" class="font-bold text-base">Rentas</a>
+        <a href="#FAQ" class="font-bold text-base">FAQs</a>
+        <a href="#about-us" class="font-bold text-base">Sobre Nosotros</a>
+      </div>
+      <div class="flex space-x-4">
+        <img src="./svg/search.svg" alt="Search Icon">
+        <img src="./svg/moon.svg" class="fill:currentColor; color:#cc2d4a;" alt="Moon Icon">
+        <img src="./svg/user.svg" alt="User Icon">
+      </div>
+    </nav>
   </header>
   <div id="tab-bar"
     class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10 lg:hidden">
@@ -35,7 +51,7 @@
   </div>
   <main>
     <section class="w-full h-auto">
-      <div id="home">
+      <div id="home" class="lg:pt-14">
         <div class="w-full h-3/4">
           <div
             class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-20 lg:justify-start">
@@ -55,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="p-6" id="recommended">
+      <div class="p-6 lg:pt-14" id="recommended">
         <p class="text-3xl font-semibold text-principal">Recomendados</p>
         <div
           class="w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain space-x-6 overflow-y-hidden">
@@ -110,8 +126,8 @@
           </div>
         </div>
       </div>
-      <div class="px-2 h-auto w-full lg:px-6" id="featured-rentals">
-        <p class="text-3xl text-principal font-semibold pb-6 mt-6">Featured Rentals</p>
+      <div class="px-2 h-auto w-full lg:px-6 lg:pt-14" id="featured-rentals">
+        <p class="text-3xl text-principal font-semibold pb-6 mt-6 lg:mt-0">Featured Rentals</p>
         <div class="w-full flex flex-col items-center justify-center">
           <div class="w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center">
             <p class="card__title lg:text-black">Chicago</p>
@@ -138,9 +154,9 @@
           </div>
         </div>
       </div>
-      <div class="w-full h-full" id="FAQ">
+      <div class="w-full h-full lg:pt-14" id="FAQ">
         <div class="w-full h-full px-6 flex flex-col space-y-4">
-          <p class="text-3xl text-principal font-semibold mt-6">FAQs</p>
+          <p class="text-3xl text-principal font-semibold mt-6 lg:mt-0">FAQs</p>
           <div>
             <p class="text-xl font-medium text-principal">Cancellation Policy</p>
             <p class="text-base pt-2">
@@ -176,7 +192,7 @@
       </div>
     </section>
   </main>
-  <footer class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16 lg:pb-6">
+  <footer id="about-us" class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16 lg:pb-6">
     <p class="text-lg text-principal font-semibold">About</p>
     <p>Investors</p>
     <p>Jobs</p>
