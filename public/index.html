@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -14,8 +14,25 @@
 <body class="font-Montserrat">
   <header>
     <nav></nav>
-    <div id="tab-bar"></div>
   </header>
+  <div id="tab-bar"
+    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10">
+    <a href="#home">
+      <img src="./svg/home.svg" alt="Home Icon">
+    </a>
+    <a href="#featured-rentals">
+      <img src="./svg/search.svg" alt="Search Icon">
+    </a>
+    <a href="#recommended">
+      <img src="./svg/heart.svg" alt="Heart Icon">
+    </a>
+    <button>
+      <img src="./svg/moon.svg" alt="Moon Icon">
+    </button>
+    <a href="#">
+      <img src="./svg/user.svg" alt="User Icon">
+    </a>
+  </div>
   <main>
     <section class="w-full h-auto">
       <div id="home">
@@ -114,7 +131,7 @@
       </div>
     </section>
   </main>
-  <footer class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2">
+  <footer class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16">
     <p class="text-lg text-principal font-semibold">About</p>
     <p>Investors</p>
     <p>Jobs</p>
