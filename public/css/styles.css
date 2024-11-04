@@ -574,18 +574,6 @@ video {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
-.z-50 {
-  z-index: 50;
-}
-
-.z-40 {
-  z-index: 40;
-}
-
 .mr-24 {
   margin-right: 6rem;
 }
@@ -715,6 +703,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-principal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 45 74 / var(--tw-bg-opacity));
+}
+
 .bg-LA {
   background-image: url('../img/LA.jpg');
 }
@@ -727,6 +720,10 @@ video {
   background-image: url('../img/chicago.jpg');
 }
 
+.bg-europe {
+  background-image: url('../img/europe.jpg');
+}
+
 .bg-miami {
   background-image: url('../img/miami.jpg');
 }
@@ -737,6 +734,22 @@ video {
 
 .bg-norway {
   background-image: url('../img/norway.jpg');
+}
+
+.bg-seattle {
+  background-image: url('../img/seattle.jpg');
+}
+
+.bg-switzerland {
+  background-image: url('../img/switzerland.jpg');
+}
+
+.bg-sydney {
+  background-image: url('../img/sydney.jpg');
+}
+
+.bg-yosemite {
+  background-image: url('../img/yosemite.jpg');
 }
 
 .bg-cover {
