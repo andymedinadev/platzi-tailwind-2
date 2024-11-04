@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="dark scroll-smooth" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="font-Montserrat">
+<body class="font-Montserrat dark:bg-gray-900">
   <header>
-    <nav class="w-full h-14 hidden bg-white p-4 justify-between lg:flex lg:fixed z-50">
+    <nav class="w-full h-14 hidden bg-white p-4 justify-between lg:flex lg:fixed z-50 dark:bg-gray-800 dark:text-white">
       <div class="h-auto w-auto">
-        <p class="text-xl text-principal font-black">Platzi Travel</p>
+        <p class="text-xl text-principal font-black dark:text-white">Platzi Travel</p>
       </div>
       <div class="flex space-x-8">
         <a href="#home" class="font-bold text-base">Inicio</a>
@@ -26,13 +26,15 @@
       </div>
       <div class="flex space-x-4">
         <img src="./svg/search.svg" alt="Search Icon">
-        <img src="./svg/moon.svg" class="fill:currentColor; color:#cc2d4a;" alt="Moon Icon">
+        <button id="toggle">
+          <img src="./svg/moon.svg" class="fill:currentColor; color:#cc2d4a;" alt="Moon Icon">
+        </button>
         <img src="./svg/user.svg" alt="User Icon">
       </div>
     </nav>
   </header>
   <div id="tab-bar"
-    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10 lg:hidden">
+    class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center z-10 lg:hidden dark:bg-gray-800">
     <a href="#home">
       <img src="./svg/home.svg" alt="Home Icon">
     </a>
@@ -42,7 +44,7 @@
     <a href="#recommended">
       <img src="./svg/heart.svg" alt="Heart Icon">
     </a>
-    <button>
+    <button id="toggle-sm">
       <img src="./svg/moon.svg" alt="Moon Icon">
     </button>
     <a href="#">
@@ -77,49 +79,49 @@
           class="w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain space-x-6 overflow-y-hidden">
           <div class="card">
             <div class="card__cover bg-norway"></div>
-            <div class="card__info bg-secondary">
+            <div class="card__info bg-secondary dark:bg-gray-700">
               <p class="card__info--title text-white">Norway</p>
               <p class="card__info--subtitle text-white">Beautiful Landscapes</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-new_york"></div>
-            <div class="card__info bg-white">
-              <p class="card__info--title text-tertiary">New York</p>
-              <p class="card__info--subtitle text-tertiary">Concrete Jungle</p>
+            <div class="card__info bg-white dark:bg-gray-800">
+              <p class="card__info--title text-tertiary dark:text-white">New York</p>
+              <p class="card__info--subtitle text-tertiary dark:text-white">Concrete Jungle</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-yosemite"></div>
-            <div class="card__info bg-secondary">
+            <div class="card__info bg-secondary dark:bg-gray-700">
               <p class="card__info--title text-white">Yosemite</p>
               <p class="card__info--subtitle text-white">A break from the world</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-seattle"></div>
-            <div class="card__info bg-white">
-              <p class="card__info--title text-tertiary">Seattle</p>
-              <p class="card__info--subtitle text-tertiary">A city to enjoy to the fullest</p>
+            <div class="card__info bg-white dark:bg-gray-800">
+              <p class="card__info--title text-tertiary dark:text-white">Seattle</p>
+              <p class="card__info--subtitle text-tertiary dark:text-white">A city to enjoy to the fullest</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-switzerland"></div>
-            <div class="card__info bg-secondary">
+            <div class="card__info bg-secondary dark:bg-gray-700">
               <p class="card__info--title text-white">Switzerland</p>
               <p class="card__info--subtitle text-white">The best chocolate you will ever taste</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-sydney"></div>
-            <div class="card__info bg-white">
-              <p class="card__info--title text-tertiary">Sydney</p>
-              <p class="card__info--subtitle text-tertiary">Get to know the famous Opera</p>
+            <div class="card__info bg-white dark:bg-gray-800">
+              <p class="card__info--title text-tertiary dark:text-white">Sydney</p>
+              <p class="card__info--subtitle text-tertiary dark:text-white">Get to know the famous Opera</p>
             </div>
           </div>
           <div class="card">
             <div class="card__cover bg-europe"></div>
-            <div class="card__info bg-secondary">
+            <div class="card__info bg-secondary dark:bg-gray-700">
               <p class="card__info--title text-white">Edinburgh</p>
               <p class="card__info--subtitle text-white">Castles and medieval times</p>
             </div>
@@ -127,19 +129,19 @@
         </div>
       </div>
       <div class="px-2 h-auto w-full lg:px-6 lg:pt-14" id="featured-rentals">
-        <p class="text-3xl text-principal font-semibold pb-6 mt-6 lg:mt-0">Featured Rentals</p>
+        <p class="text-3xl text-principal font-semibold pb-6 pt-6 lg:mt-0">Featured Rentals</p>
         <div class="w-full flex flex-col items-center justify-center">
           <div class="w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center">
             <p class="card__title lg:text-black">Chicago</p>
             <p class="text-sm pl-8 text-white lg:text-black mr-24 lg:text-lg">Two bedrooms, bathroom and kitchen</p>
           </div>
-          <div class="hidden lg:flex lg:h-full lg:w-full lg:space-x-4">
+          <div class="lg:flex lg:h-full lg:w-full lg:space-x-4">
             <div class="w-full h-96 bg-LA bg-cover rounded-xl mb-8 lg:h-auto">
               <p class="card__title">Los Angeles</p>
               <p class="text-sm pl-8 text-white mr-24 lg:text-lg">Four bedrooms, three bathrooms, kitchen and private
                 pool</p>
             </div>
-            <div class=" w-full h-full">
+            <div class="w-full h-full">
               <div class="w-full h-96 bg-miami bg-cover rounded-xl mb-8">
                 <p class="card__title">Miami</p>
                 <p class="text-sm pl-8 text-white mr-24 lg:text-lg">
@@ -156,34 +158,34 @@
       </div>
       <div class="w-full h-full lg:pt-14" id="FAQ">
         <div class="w-full h-full px-6 flex flex-col space-y-4">
-          <p class="text-3xl text-principal font-semibold mt-6 lg:mt-0">FAQs</p>
+          <p class="text-3xl text-principal font-semibold mt-6 lg:mt-0 dark:text-white">FAQs</p>
           <div>
-            <p class="text-xl font-medium text-principal">Cancellation Policy</p>
-            <p class="text-base pt-2">
+            <p class="text-xl font-medium text-principal dark:text-white">Cancellation Policy</p>
+            <p class="text-base pt-2 dark:text-white">
               For stays of less than a week, it is important to notify 3 days in advance, otherwise you will be
               penalized.
             </p>
           </div>
           <div>
-            <p class="text-xl font-medium text-principal">Payment methods</p>
-            <p class="text-base pt-2">
+            <p class="text-xl font-medium text-principal dark:text-white">Payment methods</p>
+            <p class="text-base pt-2 dark:text-white">
               We accept various payment methods: VISA, MasterCard, American Express,
               Paypal and Binance.
             </p>
           </div>
           <div>
-            <p class="text-xl font-medium text-principal">Pets</p>
-            <p class="text-base pt-2">The host will decide what to do regarding pets in each case.</p>
+            <p class="text-xl font-medium text-principal dark:text-white">Pets</p>
+            <p class="text-base pt-2 dark:text-white">The host will decide what to do regarding pets in each case.</p>
           </div>
           <div>
-            <p class="text-xl font-medium text-principal">Safety Information</p>
-            <p class="text-base pt-2">
+            <p class="text-xl font-medium text-principal dark:text-white">Safety Information</p>
+            <p class="text-base pt-2 dark:text-white">
               All our stays have insurance in case of accidents.
             </p>
           </div>
           <div>
-            <p class="text-xl font-medium text-principal">Long Stays</p>
-            <p class="text-base pt-2">
+            <p class="text-xl font-medium text-principal dark:text-white">Long Stays</p>
+            <p class="text-base pt-2 dark:text-white mb-4">
               We accept stays of up to 3 months, in which case an advance payment of 50% of the rental value is
               required.
             </p>
@@ -192,7 +194,7 @@
       </div>
     </section>
   </main>
-  <footer id="about-us" class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 space-y-2 pb-16 lg:pb-6">
+  <footer id="about-us" class="w-full h-auto text-gray-500 text-sm bg-gray-50 p-6 pt-2 space-y-2 pb-16 lg:pb-6">
     <p class="text-lg text-principal font-semibold">About</p>
     <p>Investors</p>
     <p>Jobs</p>
@@ -201,6 +203,20 @@
     <p>Platzi Travel, Inc</p>
     <p>Follow Us</p>
   </footer>
+  <script>
+    const htmlElement = document.querySelector('html')
+    const toggleButton = document.querySelector('#toggle')
+    const toggleButtonSm = document.querySelector('#toggle-sm')
+
+    function toggleDarkMode() {
+      htmlElement.classList.contains('dark') ?
+        htmlElement.classList.remove('dark') :
+        htmlElement.classList.add('dark')
+    }
+
+    toggleButton.addEventListener('click', () => toggleDarkMode())
+    toggleButtonSm.addEventListener('click', () => toggleDarkMode())
+  </script>
 </body>
 
 </html>
